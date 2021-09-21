@@ -1,0 +1,21 @@
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Identificacion</label>
+        <input type="number" class="form-control" name="identificacioninput" [(ngModel)]="persona.identificacion" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Nombre</label>
+        <input type="text" class="form-control"  [(ngModel)]="persona.nombre" name="nombreinput">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Edad</label>
+        <input type="number" class="form-control" [(ngModel)]="persona.edad" name="edadinput">
+    </div>
+    <label for="exampleInputPassword1" class="form-label">Sexo</label>
+    <select class="form-select" [(ngModel)]="persona.sexo" aria-label="Default select example">
+        <option selected>Seleccione</option>
+        <option value="m">Masculino</option>
+        <option value="f">Femenino</option>
+    </select><br>
+    <button type="submit" (click)="add()" class="btn btn-primary">Submit</button>
+</form>
